@@ -4,16 +4,16 @@ import {IoMdClose} from "react-icons/io";
 import Button from "@/components/Button";
 
 interface ModalProps {
-    isOpen?: boolean,
-    onClose: () => void,
-    onSubmit: () => void,
-    title?: string,
-    body?: React.ReactElement,
-    footer?: React.ReactElement,
-    actionLabel: string,
-    disabled?: boolean,
-    secondaryAction?: () => void,
-    secondaryActionLabel?: string
+    isOpen?: boolean;
+    onClose: () => void;
+    onSubmit: () => void;
+    title?: string;
+    body?: React.ReactElement;
+    footer?: React.ReactElement;
+    actionLabel: string;
+    disabled?: boolean;
+    secondaryAction?: () => void;
+    secondaryActionLabel?: string;
 }
 
 const Modal: React.FC<ModalProps> = ({
@@ -28,7 +28,7 @@ const Modal: React.FC<ModalProps> = ({
                                          secondaryActionLabel,
                                          secondaryAction
                                      }) => {
-    const [showModal, setShowModel] = useState(false)
+    const [showModal, setShowModel] = useState(isOpen)
     useEffect(() => {
         setShowModel(isOpen)
     }, [isOpen])

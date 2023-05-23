@@ -1,15 +1,20 @@
-import './globals.css'
-import { Nunito } from 'next/font/google'
-import Navbar from "../components/navbar/Navbar";
 import React from "react";
+
+import { Nunito } from 'next/font/google'
+
+import Navbar from "../components/navbar/Navbar";
 import ClientOnly from "../components/ClientOnly";
 import RegisterModal from "@/components/modals/RegisterModal";
-import ToasterProvider from "@/providers/ToasterProvider";
 import LoginModal from "@/components/modals/LoginModal";
-import getCurrentUser from "@/actions/getCurrentUser";
 import RentModal from "@/components/modals/RentModal";
+import SearchModal from "@/components/modals/SearchModal";
 
-const nunito = Nunito({subsets: ['latin']})
+import ToasterProvider from "@/providers/ToasterProvider";
+import getCurrentUser from "@/actions/getCurrentUser";
+
+import './globals.css'
+
+const font = Nunito({subsets: ['latin']})
 
 export const metadata = {
     title: 'AirBnB',
@@ -20,15 +25,18 @@ export default async function RootLayout({children,}: { children: React.ReactNod
     const currentUser = await getCurrentUser()
     return (
         <html lang="en">
-        <body className={nunito.className}>
+        <body className={font.className}>
         <ClientOnly>
             <ToasterProvider/>
+            <SearchModal/>
             <RentModal/>
             <LoginModal/>
             <RegisterModal/>
             <Navbar currentUser={currentUser}/>
         </ClientOnly>
-        {children}
+        <div className="pt-28 pb-20">
+            {children}
+        </div>
         </body>
         </html>
     )

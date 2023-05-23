@@ -4,19 +4,18 @@ import {FcGoogle} from "react-icons/fc"
 import {useCallback, useState} from "react";
 import {FieldValues, SubmitHandler, useForm} from "react-hook-form";
 import { signIn } from "next-auth/react"
-import useLoginModel from "../../../hooks/useLoginModal";
-import useRegisterModel from "../../../hooks/useRegisterModal";
+import useLoginModal from "../../../hooks/useLoginModal";
+import useRegisterModal from "../../../hooks/useRegisterModal";
 import {useRouter} from "next/navigation";
 import Modal from "@/components/modals/Modal";
 import Heading from "@/components/Heading";
 import Input from "@/components/inputs";
 import toast from "react-hot-toast";
 import Button from "@/components/Button";
-import useLoginModal from "../../../hooks/useLoginModal";
 
 const LoginModal = () => {
-    const loginModel = useLoginModel();
-    const registerModel = useRegisterModel();
+    const loginModal = useLoginModal();
+    const registerModal = useRegisterModal();
     const [isLoading, setIsLoading] = useState(false);
     const router = useRouter();
     const {register, handleSubmit, formState: {errors}} = useForm<FieldValues>({
@@ -36,7 +35,7 @@ const LoginModal = () => {
                 if (callback?.ok){
                     toast.success("Logged in")
                     router.refresh();
-                    loginModel.onClose();
+                    loginModal.onClose();
                 }
                 if (callback?.error) {
                     toast.error(callback.error)
@@ -46,9 +45,9 @@ const LoginModal = () => {
     }
 
     const toggle = useCallback(() => {
-        loginModel.onClose();
-        registerModel.onOpen()
-    }, [loginModel, registerModel])
+        loginModal.onClose();
+        registerModal.onOpen()
+    }, [loginModal, registerModal])
 
     const bodyContent = (
         <div className="flex flex-col gap-4">
@@ -76,9 +75,9 @@ const LoginModal = () => {
     return (
         <Modal
             disabled={isLoading}
-            isOpen={loginModel.isOpen}
+            isOpen={loginModal.isOpen}
             title="Login"
-            onClose={loginModel.onClose}
+            onClose={loginModal.onClose}
             onSubmit={handleSubmit(onSubmit)}
             actionLabel="Continue"
             body={bodyContent}
