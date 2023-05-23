@@ -1,34 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div style="display:flex; align-items:center; justify-content:center; flex-direction:column; gap:10px">
+    <img style="width:100px; height:100px; object-fit:cover;" src="./images/logo.png"/>
+    <h2>
+        NextJs v13 AirBnB Clone Responsive
+    </h2>
+</div>
 
-## Getting Started
 
-First, run the development server:
 
-```bash
+
+
+> **Live Link:**  [https://nextjs-v13-tesla-clone.vercel.app/](https://nextjs-v13-tesla-clone.vercel.app/)
+
+![][gif]
+
+![][img1]
+
+![][img2]
+
+![][img3]
+
+![][img4]
+
+![][img5]
+
+![][img6]
+
+
+
+## Build
+
+- [ ] Nextjs v13
+
+- [ ] Typescript
+
+- [ ] Zustand
+
+- [ ] Tailwindcss
+
+- [ ] Prisma
+
+- [ ] Next-Auth
+
+  
+
+```react
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
+npm run build && npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+> ### Project Link
+>
+> [**https://github.com/enesdmc0/Nextjs13-AirBnB-Clone**][projectLink]
 
-## Learn More
+## Contact
 
-To learn more about Next.js, take a look at the following resources:
+[**Twitter - enesdmc00**][twitter]
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[**Email - enesdmcc@gmail.com**][mail]
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[**Linkedin - enesdemirci1**][linkedin]
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
+[gif]: ./images/video.gif
+[img1]: ./images/img1.png
+[img2]: ./images/img2.png
+[img3]:./images/img3.png
+[img4]: ./images/img4.png
+[img5]: ./images/img5.png
+[img6]: ./images/img6.png
+
+
+
+
+
+[mail]: enesdmcc@gmail.com
+[twitter]: https://twitter.com/enesdmc00
+[linkedin]: inkedin.com/in/enesdemirci1
+[projectLink]: https://github.com/enesdmc0/Nextjs-v13-Tesla-clone-
+
+
+
