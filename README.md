@@ -9,7 +9,7 @@
 
 
 
-> **Live Link:**  [https://nextjs-v13-tesla-clone.vercel.app/](https://nextjs-v13-tesla-clone.vercel.app/)
+> **Live Link:**  [https://nextjs13-air-bn-b-clone-65zt.vercel.app/](https://nextjs13-air-bn-b-clone-65zt.vercel.app/)
 
 ![][gif]
 
